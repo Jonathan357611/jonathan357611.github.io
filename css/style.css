@@ -1,0 +1,261 @@
+@font-face {
+    font-family: "Motiva Sans";
+    src: url(../fonts/MotivaSans-Black.ttf?v=4.015) format("truetype");
+    font-weight: 900;
+}
+
+html, body {
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    
+}
+
+p, h1, h2, h3 {
+    color: white;
+    margin: 0.2em;
+    font-weight: 600;
+}
+
+.button {
+    z-index: 3;
+    font-family: 'Source Code Pro', "Arial";
+    background: black;
+    padding: 0.3em;
+    border: 2px solid yellow;
+    font-size: 120%;
+    color: white;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+li {
+    color: white;
+}
+
+ul {
+    margin-top: 0.4em;
+    list-style-image: url("/images/bullet_point_yellow.png");
+}
+
+.button:hover {
+    z-index: 3;
+    color: black;
+    background-color: yellow;
+}
+
+a {
+    color: yellow;
+    transition: 0.3s;
+}
+a:visited {
+    color: yellow;
+    transition: 0.3s;
+}
+a:hover {
+    color: black;
+    background-color: yellow;
+}
+a:visited:hover {
+    color: black;
+    background-color: yellow;
+}
+
+.text-block {
+    border-left: 3px solid yellow;
+    padding-left: 1em;
+    margin-left: 0.5em;
+}
+
+#intro {
+    color: white;
+    position: relative;
+}
+
+#intro_contents {
+    position: absolute;
+    margin-left: 10%;
+    top: 20%;
+}
+
+.highlight {
+    color: yellow;
+}
+
+.extra_highlight {
+    background-color: yellow;
+    color: black;
+}
+
+.title {
+    color: white;
+    border-left: 3px solid yellow;
+    padding-left: 0.5em;
+    font-size: 300%;
+}
+
+#markdown {
+    margin-left: 9em;
+    margin-right: 9em;
+    font-size: x-large;
+}
+
+#markdown img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    height: auto;
+    width: 30%;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.project {
+    color: yellow;
+    margin: 0.3em;
+    float: left;
+    width: 30%;
+    height: 14em;
+    border: 5px solid rgb(97, 97, 97);
+
+    background-repeat: no-repeat;
+    background-blend-mode: add;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgb(0, 0, 0, 0.75) 100%), var(--image) !important;
+    background-size: 1% 1%;
+    background-position: middle;
+
+    transition: 0.2s;
+}
+
+
+.project h2 {
+    margin-left: 0.5em;
+    color: yellow;
+}
+
+.project p {
+    margin-left: 0.7em;
+}
+
+.project:hover {
+    color: black;
+    border: 5px solid yellow;
+    box-shadow: 4px 4px rgb(255, 196, 0);
+    background: linear-gradient(90deg, rgba(255, 196, 0, 0.8) 0%, rgb(255, 196, 0, 0.75) 100%), var(--image) !important;
+}
+.project:hover h2 {
+    color: black;
+}
+
+@keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(16deg);
+    }
+    50% {
+      transform: rotate(-6deg);
+    }
+    75% {
+      transform: rotate(16deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
+.wave {
+    animation: wave 1s;
+    transform-origin: 75% 75%;
+    display: inline-block;
+}
+
+.container {
+    flex-basis: 50%;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.container .child {
+    scroll-snap-align: start;
+    height: 100%;
+}
+
+#support_popup {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.938);
+    border: 2px solid yellow;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    width: 30%;
+    height: 70%;
+    text-align: center;
+    margin: 1em;
+}
+
+#overlay {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 800px) {
+    #intro {
+        font-size: 90%;
+    }
+    h1 {
+        font-size: 170%;
+        margin-bottom: 1em;
+    }
+    #intro_contents {
+        position: absolute;
+        margin-left: 0;
+        top: 10%;
+    }
+    .project {
+        color: yellow;
+        margin: 0;
+        margin-bottom: 0.6em;
+        float: left;
+        width: 100%;
+        height: 10em;
+        border: 5px solid yellow;
+    }
+    #support_popup {
+        width: 80%;
+        height: 90%;
+        margin: 2em;
+
+        top: 0;
+        left: 0;
+    }
+    #markdown {
+        margin-left: 2em;
+        margin-right: 2em;
+        font-size: larger;
+    }
+    
+    #markdown img {
+        height: auto;
+        width: 100%;
+    }
+
+    ul {
+        margin-left: 0;
+        padding-left: 1.7em;
+        margin-top: 0.4em;
+        list-style-image: url("/images/bullet_point_yellow.png");
+    }
+}

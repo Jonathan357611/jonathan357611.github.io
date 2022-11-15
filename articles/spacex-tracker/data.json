@@ -1,0 +1,7 @@
+{
+    "title": "SpaceX-Tracker",
+    "description": "A SpaceX tracker utilising an E-Ink display and a RPI-Zero.",
+    "image": "spacex-tracker.png",
+    "filename": "spacex-tracker",
+    "type": "article"
+}
