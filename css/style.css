@@ -41,6 +41,11 @@ ul {
     list-style-image: url("/images/bullet_point_yellow.png");
 }
 
+.text-container {
+    margin: 2em;
+    width: 40%;
+}
+
 .button:hover {
     z-index: 3;
     color: black;
@@ -257,5 +262,10 @@ a:visited:hover {
         padding-left: 1.7em;
         margin-top: 0.4em;
         list-style-image: url("/images/bullet_point_yellow.png");
+    }
+
+    .text-container {
+        margin: 0.4em;
+        width: 100%;
     }
 }

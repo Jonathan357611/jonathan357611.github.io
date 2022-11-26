@@ -54,6 +54,7 @@ function main() {
         $("#overlay").hide();
         $("#main").css("background-color", "black")
     });
-
-    console.log("asd");
+    
+    var wisdoms = ["Plz dont look at the page source code. Spoiler: It's bad.", "TABS OVER SPACES", "My github is >95 python, send help.", "Linux FTW", "NVidia: Fuck You!", "This was made out of boredom", "Programing is 90% StackOverflow + 10% crying", "This is the worst part about my page", "(Made with too much time)", "Hosted as static page on github cuz Im poor", "brought to you by git push --force", "Cool, but can you center a div?"]
+    $("#wisdom").text(wisdoms[Math.floor(Math.random() * wisdoms.length)]);
 }
