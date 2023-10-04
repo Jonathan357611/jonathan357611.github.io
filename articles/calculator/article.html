@@ -1,0 +1,45 @@
+<p>This is my very first project using a custom designed PCB</p>
+
+<h2 class="section_title">Overview</h2>
+<p>The calculator is using the RPI Pico (RP2040) as the microcontroller
+    and two SSD1306 OLED displays, where the left one shows the calculation query and the left one the result.
+    The switches can be any CherryMX switch. I chose the blue ones for a loud, tactile experience.
+    <br><br>
+    The Pico runs a slow micropython script to control everything.
+    <br><br>
+    It is also important to note, that this is an old project of mine. This means that there are some non-ideal design choices in the software and hardware. I do NOT recommend to build it in its current state!
+    This is why I called it the "V1" as I might do a complete hard and software redo in the future.
+    The design files and software are still open source though ( of course :D ).
+</p>
+<h2 class="section_title">Roadmap</h2>
+<p>
+    Like I said, the calculator runs a circuitpython program, which is kind of slow.
+    There are also several bad hardware design choices especially in the power-related circuits.
+    Although the current 3D-printed case does "work", I am not happy with it, as the dimensions are off by a few millimeters and there is some strong glue required.
+    <br><br><br>
+    So this is what I might redo in the V2:
+    <ul>
+        <li>Software rewrite in C++</li>
+        <li>Better power circuit</li>
+        <li>Battery protection</li>
+        <li>Voltage boosters</li>
+        <li>Full case with keycaps</li>
+    </ul>
+</p>
+<h2 class="section_title">Schematics</h2>
+<p>The PCB is entirely made in <a href="https://www.kicad.org/">KiCad</a>, an awesome opensource EDA-program!
+    
+    <br><br><br>
+    Image of the schematic:</p>
+<img src="pcb.png" alt="">
+<p>You can already see, that there is a lack of voltage regulation etc. This is planned for Calculator V2</p>
+<p>Both SSD1306 are controlled via I²C. The first display utilizes pins GP3 and GP2 while the second OLED uses GP1 and GP0.
+    <br><br>
+    Every switch is connected to its own GPIO pin, which is also suboptimal. I'll probably use a multiplexing solution in the V2.
+</p>
+
+<h2 class="section_title">
+    In this version, the RPi Pico runs a CircuitPython script (Python for µControllers).
+    
+    PLEASE FINISH THIS JONATHAN!!!
+</h2>

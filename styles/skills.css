@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+#skills {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    scroll-snap-stop: always;
+    position: relative;
+}
+
+.skill {
+    width: 33.33vw;
+    height: 100%;
+    flex: 1;
+}
+
+.skill_half {
+    width: 33.33vw;
+}
+.skill_half_white {
+    background-color: #fff;
+}
+.skill_half_black {
+    background-color: #000;
+}
+
+.skill_title {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ndot-55";
+    font-size: 3vw;
+}
+.skill_content {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.skill_half_white.skill_title {
+    color: #000;
+}
+.skill_half_white.skill_content {
+    color: #000;
+}
+
+.skill_content > p {
+    padding: 2em;
+    font-size: 2vh;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #skills {
+        flex-direction: column;
+    }
+    .skill {
+        width: 100%;
+        height: 33.33%;
+    }
+    .skill_half {
+        height: 100%;
+        width: 50%;
+        float: left;
+    }
+    .skill_title {
+        width: 17%;
+    }
+    .skill_title > h1 {
+        width: 100%;
+        word-wrap:break-word;
+    }
+    .skill_content {
+        width: 83%;
+    }
+    .skill_title {
+        font-size: 4vw;
+    }
+    .skill_content > p {
+        padding: 0.5em;
+        font-size: 1.7vh;
+    }    
+}

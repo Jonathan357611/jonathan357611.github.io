@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "NType82Mono";
+    src: url("/fonts/NType82Mono-Regular.otf");
+}
+@font-face {
+    font-family: "NType82";
+    src: url("/fonts/NType82-Regular.otf");
+}
+@font-face {
+    font-family: "LetteraMono";
+    src: url("/fonts/LetteraMonoLLCondLight-Regular.otf");
+}
+@font-face {
+    font-family: "Ndot-55";
+    src: url("/fonts/Ndot-55.otf");
+}
+
+:root {
+    --background-color: #000;
+    --text-color: #fff;
+    --color-blue: #007bff;
+    --color-red: #f83535;
+}
+
+body {
+    font-family: "NType82Mono";
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+}
+
+html, body {
+    background-color: var(--background-color);
+}
+
+
+a {
+    color: var(--color-blue);
+}
+
