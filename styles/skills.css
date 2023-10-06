@@ -76,8 +76,8 @@ html, body {
         width: 17%;
     }
     .skill_title > h1 {
-        width: 100%;
-        word-wrap:break-word;
+        max-width: 100%;
+        word-wrap: break-word;
     }
     .skill_content {
         width: 83%;

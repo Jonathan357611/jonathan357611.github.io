@@ -39,3 +39,12 @@ a {
     color: var(--color-blue);
 }
 
+.underline {
+    text-decoration: underline;
+    text-decoration-color: var(--color-red);
+    text-decoration-thickness: 3px;
+}
+.quote {
+    border-left: 3px solid var(--color-red);
+    padding-left: 10px;
+}

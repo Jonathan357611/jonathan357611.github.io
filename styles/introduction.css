@@ -16,11 +16,12 @@
 }
 #intro_text_body {
     font-size: larger;
+    max-width: 70vw;
+    margin: 0 auto;
 }
 .title {
     font-family: "Ndot-55";
     font-size: 8em;
-    width: 90vw;
 }
 .ntype {
     font-family: "NType82";
@@ -63,6 +64,13 @@
 @media (max-aspect-ratio: 1/1) {
     .title {
         font-size: 3.5em;
+        width: 100vw;
+        text-align: center;
+    }
+
+    #intro_text_body {
+        font-size: 90%;
+        max-width: 95vw;
     }
 }
 
