@@ -53,6 +53,14 @@ html, body {
 .skill_half_white.skill_content {
     color: #000;
 }
+.skill_half_white .underline {
+    text-decoration-color: #000;
+    text-decoration-thickness: 2px;
+}
+.skill_half_black .underline {
+    text-decoration-color: #fff;
+    text-decoration-thickness: 2px;
+}
 
 .skill_content > p {
     padding: 2em;

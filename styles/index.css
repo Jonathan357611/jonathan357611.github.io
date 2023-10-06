@@ -77,6 +77,8 @@ html, body {
 
 .project_description {
     padding: 1em;
+    height: 100vh;
+    position: relative;
 }
 
 .project_title {
@@ -130,11 +132,5 @@ html, body {
 
     .description_text {
         font-size: 2vmax;
-    }
-
-    .project:nth-child(odd) .button {
-        position: absolute;
-        bottom: 1em;
-        left: 1em;
     }
 }

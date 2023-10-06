@@ -27,6 +27,7 @@ function insertArticles(articles) {
                 <div class="project_description">
                     <h1 class="project_title">${article.name}</h1>
                     <p class="description_text">${article.description}</p>
+                    <br>
                     <a href="/article.html?article=${article.filename}" class="button">Read more >></a>
                 </div>
             </div>
@@ -43,6 +44,7 @@ function insertArticles(articles) {
                 <div class="project_description">
                     <h1 class="project_title">${article.name}</h1>
                     <p class="description_text">${article.description}</p>
+                    <br>
                     <a href="/article.html?article=${article.filename}" class="button">Read more >></a>
                 </div>
             </div>
