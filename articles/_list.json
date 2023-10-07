@@ -8,7 +8,7 @@
         },
         {
             "name": "Calculator V1",
-            "description": "My very first attempt at a PCB-based project; an RP2040-based calculator on a custom-designed PCB with Cherry MX switches and two SSD1306 OLED displays.<br><br>DISCLAIMER: This project, labeled 'V1,' was created in 2022, and I've since improved my electronics knowledge, leading to revisions that address serious design flaws in this project.",
+            "description": "My very first attempt at a PCB-based project; an RP2040-based calculator on a custom-designed PCB with Cherry MX switches and two SSD1306 OLED displays. It uses CircuitPython and can even interact as an HID numpad.<br><br>All files are open source although this project has some serious design flaws which I plan to adress in \"Calculator V2\".",
             "image": "calculator",
             "filename": "calculator",
             "links": [
