@@ -1,5 +1,5 @@
 <p>This is my very first project using a custom designed PCB</p>
-
+<img src="sideview.jpg" alt="">
 <h2 class="section_title">Overview</h2>
 <p>The calculator is using the RPI Pico (RP2040) as the microcontroller
     and two SSD1306 OLED displays, where the left one shows the calculation query and the left one the result.
@@ -32,14 +32,31 @@
     <br><br><br>
     Image of the schematic:</p>
 <img src="pcb.png" alt="">
-<p>You can already see, that there is a lack of voltage regulation etc. This is planned for Calculator V2</p>
+<p>You can already see, that there is a lack of any voltage regulation etc. This is planned for Calculator V2.</p>
 <p>Both SSD1306 are controlled via I²C. The first display utilizes pins GP3 and GP2 while the second OLED uses GP1 and GP0.
     <br><br>
     Every switch is connected to its own GPIO pin, which is also suboptimal. I'll probably use a multiplexing solution in the V2.
 </p>
 
-<h2 class="section_title">
+<h2 class="section_title">Code</h2>
+<p>
     In this version, the RPi Pico runs a CircuitPython script (Python for µControllers).
-    
-    PLEASE FINISH THIS JONATHAN!!!
-</h2>
+    The V2 will definitely have a a C++ rewrite, as CircuitPython is very slow and just to much for this application.
+    <br><br>
+    I used an aproach, where I basically add every keypress to a list. So 3+4-2 would look like this: [3, "+", 4, "-", 2].
+    As soon as you press the enter button, the script basically joins the list to a string and runs a symbol "eval" to get the result.
+    This is then displayed on the dedicated result screen.
+    <br><br>
+    It is also possible to use the calculator as an HID-numpad. This can be enabled by changing the "HID" variable to True in line  7.
+    This will import the necessary functions and overwrites the normally empty "layout" class. Note that this does increase the load times by quite a lot.
+</p>
+
+<h2 class="section_title">Installation</h2>
+<p>
+    I tried to simplify the installation process as much as possible, but please keep in mind that this was written a long time ago and I've since gained
+    a lot of knowledge.
+    <br><br>
+    This means that you <i>technically</i> only need to clone the repo and run "./installer.sh".
+    <br><br>
+    It will ask you for the Picos mounting point and then simply copy all necessary files over.
+</p>

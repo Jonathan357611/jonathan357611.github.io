@@ -5,7 +5,7 @@
 
 #introduction {
     height: 100vh;
-    border: 2em solid #fff;
+    border: 1em solid #fff;
     border-top: none;
     border-bottom: none;
     position: relative;
@@ -13,9 +13,13 @@
 }
 
 #intro_title {
-    text-align: center;
     background-color: #fff;
     color: #000;
+    display: flex;
+    justify-content: center;
+}
+#intro_title .title {
+    width: 70vw;
 }
 
 #intro_text_container {
@@ -26,7 +30,7 @@
     position: relative;
 }
 #intro_text {
-    padding: 2em;
+    padding: 1em;
     max-width: 70vw;
     font-size: 120%;
 }
@@ -50,6 +54,7 @@
 
 .ndot {
     font-family: "Ndot-55";
+    font-weight: 500;
     color: var(--color-white)
 }
 
@@ -64,12 +69,19 @@
     #intro_text {
         padding: 0.5em;
         max-width: 90vw;
-        font-size: 90%;
+        font-size: calc(45% + 2vw);
     }
     .title_big {
-        font-size: 3.5em;
+        font-size: 3.3em;
         width: 100%;
         text-align: center;
+    }
+    #intro_title {
+        text-align: center;
+        display: block;
+    }
+    #intro_title .title {
+        width: auto;
     }
 }
 
