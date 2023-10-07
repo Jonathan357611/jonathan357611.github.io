@@ -1,4 +1,4 @@
-const projects_container = document.getElementById("main");
+const projects_container = document.getElementById("_place_articles");
 
 function getArticles() {
     return new Promise((resolve, reject) => {

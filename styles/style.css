@@ -42,9 +42,9 @@ a {
 .underline {
     text-decoration: underline;
     text-decoration-color: var(--color-red);
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 2px;
 }
 .quote {
-    border-left: 3px solid var(--color-red);
+    border-left: 2px solid var(--color-red);
     padding-left: 10px;
 }

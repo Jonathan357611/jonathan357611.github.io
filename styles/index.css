@@ -83,7 +83,7 @@ html, body {
 
 .project_title {
     font-family: "NType82";
-    font-size: 5vh;
+    font-size: 7vh;
     font-weight: 900;
     margin-top: 0; /* Add this line to remove the top margin */
 }
@@ -132,5 +132,9 @@ html, body {
 
     .description_text {
         font-size: 2vmax;
+    }
+
+    .project_title {
+        font-size: 5vh;
     }
 }

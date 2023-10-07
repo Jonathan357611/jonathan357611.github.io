@@ -4,6 +4,76 @@
 }
 
 #introduction {
+    height: 100vh;
+    border: 2em solid #fff;
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#intro_title {
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+}
+
+#intro_text_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#intro_text {
+    padding: 2em;
+    max-width: 70vw;
+    font-size: 120%;
+}
+
+#intro_footer {
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    height: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+.title_big {
+    background-color: #000;
+    font-size: 600%;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+.ndot {
+    font-family: "Ndot-55";
+    color: var(--color-white)
+}
+
+.heart {
+    color: var(--color-red);
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #introduction {
+        border-width: 0.5em;
+    }
+    #intro_text {
+        padding: 0.5em;
+        max-width: 90vw;
+        font-size: 90%;
+    }
+    .title_big {
+        font-size: 3.5em;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*#introduction {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -35,9 +105,9 @@
 
 #overview_container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr)); /* Adjust the width as needed */
-    grid-gap: 0px; /* Gap between grid items */
-    width: 60em; /* Ensure the grid container doesn't exceed its parent's width */
+    grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+    grid-gap: 0px;
+    width: 60em;
     max-width: 100vw;
     padding: 1em;
 }
@@ -73,154 +143,4 @@
         max-width: 95vw;
     }
 }
-
-
-/*#intro_container {}
-#intro_title {
-    width: 100vw;
-    background-color: #fff;
-    text-align: center;
-}
-#intro_title h1 {
-    color: #000;
-    font-family: "Ndot-55";
-    font-size: 7rem;
-}
-
-
-
-@media (max-aspect-ratio: 1/1) {
-    #intro_title h1 {
-        font-size: 5rem;
-    }
-}*/
-
-/*#intro_container {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-#intro_title {
-    width: 100vw;
-    position: relative;
-}
-#intro_title h1 {
-    font-family: "Ndot-55";
-    left: 0;
-    font-size: 10vw;
-    letter-spacing: 0.5em;
-    width: 100vw;
-    max-width: 100vw;
-    text-align: center;
-    font-weight: 900;
-    background-color: #fff;
-    color: #000;
-    word-wrap:break-word;
-}*/
-
-/*#introduction {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#intro-card-container-outer {
-    display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 50vw;
-}
-#intro-card-container {
-    display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 10px;
-  width: 100%;
-}
-
-.card {
-    background-color: #fff;
-    border-radius: 20px;
-    margin: 5px;
-    padding: 0;
-    color: #000;
-    transition: 0.3s;
-    position: relative;
-    text-align: center; 
-
-    overflow: hidden;
-}
-
-.card:hover {
-    transform: scale(105%);
-    background-color: #fff;
-}
-
-.card:not(:hover) {
-    background-color: #e4e4e4;
-}
-
-.size-1x1 {
-    aspect-ratio: 1/1;
-  }
-  
-  .size-2x1 {
-    height: 100x;
-    aspect-ratio: 2;
-  }
-  
-  .size-1x2 {
-    aspect-ratio: 1/2;
-  }
-
-.card {
-    font-family: "Ndot-55";
-    font-size: 1.7vh;
-    padding: 0;
-    letter-spacing: 10px;
-}
-.card .title_container {
-    padding: 0;
-    margin: 0;
-
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-}
-.card .title_container .title {
-    padding: 0;
-    margin: 0;
-}
-
-.card .content {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    justify-content: right;
-    align-items: end;
-}
-.card .content h1 {
-    font-weight: 100;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    font-size: 18vmin;
-    text-align: right;
-    transition: 0.3s;
-    border-left: 3px solid #000;
-    width: calc(100% - 40px);
-    height: 100%;
-}
-.card:hover .content h1 {
-    color: red;
-}
-
-.card .content h1.small-text {
-    font-size: 6vh;
-}*/
+*/
