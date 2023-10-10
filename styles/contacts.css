@@ -10,8 +10,6 @@
 
 #contacts_title {
     height: 100vh;
-    padding: 0;
-    margin: 0;
     font-family: "Ndot-55";
     font-size: 5vh;
     display: flex;
@@ -21,7 +19,9 @@
     background-color: #fff;
     color: #000;
     width: fit-content;
-    border: 1px solid red;
+    max-width: 5vw;
+    position: relative;
+    float: right;
 }
 
 #contacts_title h1 span::after {
@@ -29,58 +29,65 @@
     white-space: pre;
 }
 
-#contact_cards_container {
-    float: left;
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-}
-.contact_card {
+#contact_text {
+    height: 100vh;
+    width: 20vw;
     background-color: #fff;
     color: #000;
-    height: 10em;
-    position: relative;
-}
-.contact_card > * {
     float: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    align-items: center;
+    font-size: 130%;
 }
-.contact_card_text {
-    width: calc(90vw - 10em);
-    height: 10em;
-    display: inline-block;
-    position: relative;
+
+#contact_cards_outer {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.contact_card_title {
-    font-size: 250%;
-    text-align: center;
+#contact_cards {
+    background-color: #fff;
+    width: 100%;
+    margin: 20px;
+    padding: 5px;
+    display: flexbox;
 }
-.contact_card_name {
-    text-align: center;
-    font-size: 120%;
+.contact {
+    color: #000;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
-.contact_card_footer {
-    position: absolute;
-    bottom: 0;
+.contact:nth-child(odd) {
     background-color: #000;
     color: #fff;
-    float: center;
+}
+.contact_title {
+    width: 50%;
+    font-size: 4vmax;
+    padding-left: 0.5em;
+    border-right: 2px solid #fff;
+}
+.contact:nth-child(even) > .contact_title {
+    border-color: #000;
+}
+
+.contact_name {
+    width: 50%;
     text-align: center;
-    margin: 0 auto;
-    width: 100%;
+    font-size: 150%;
 }
-.contact_image {
-    height: 10em;
-    width: auto;
-    filter: grayscale(100%);
-    top: 0;
-    left: 0;
-    transition: 0.3s;
+.contact_name a {
+    color: white;   
 }
-.contact_card:hover > .contact_image {
-    filter: grayscale(0%);
-}
-.contact_card:hover .contact_card_footer {
-    font-style: italic;
+.contact_name a:visited {
+    color: white;
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -90,9 +97,42 @@
         padding: 0;
         font-size: 10vw;
         justify-content: center;
+        max-width: 100vw;
+        float: left;
     }
     #contacts_title h1 span::after {
         content: none;
         white-space: none;
+    }
+
+    #contact_text {
+        width: calc(100vw - 2em);
+        padding: 1em;
+        margin: 0;
+        height: auto;
+        font-size: 4.5vmin;
+    }
+
+    #contact_cards_outer {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    #contact_cards {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+    }
+    .contact {
+        height: 10vh;
+    }
+    .contact_title {
+        font-size: 200%;
+        width: 50vw;
+    }
+    .contact_name {
+        font-size: 90%;
+        width: 50vw;
     }
 }
