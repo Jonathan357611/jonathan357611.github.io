@@ -46,6 +46,7 @@ function loadArticle(filename) {
             .then(article_html => {
                 // Got article
                 article_title.innerText = article.name;
+                document.querySelector("title").innerText = article.name;
                 
                 // Insert links
                 article.links.forEach(function(link) {
