@@ -57,6 +57,8 @@ function loadArticle(filename) {
                 })
 
                 article_content.innerHTML = article_html;
+                Prism.highlightAll();
+                
                 var images = article_content.querySelectorAll("img");
                 images.forEach(function(image) {
                     var img_src = image.getAttribute("src");

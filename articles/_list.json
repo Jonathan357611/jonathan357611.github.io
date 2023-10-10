@@ -4,7 +4,8 @@
             "name": "Substitution Plan",
             "description": "This is a RPI Zero W-powered device that displays my daily substitution plan, including changes like dropped lessons, room or teacher changes. It uses a 2.13\" Dual-Color E-Ink display from WaveShare (in black and red) and runs a Python script to fetch data from the German substitution plan provider, <a href=\"https://www.dsbmobile.de\">DSBMobile</a>, every 30 minutes. I'm using the <a href=\"https://github.com/nerrixde/DSBApi\">DSBApi</a> by nerrixde. You can find an installer in my repo to set it up easily on a fresh Raspberry Pi OS Lite install",
             "image": "dsb-eink",
-            "filename": "substitution_plan"
+            "filename": "substitution_plan",
+            "links": []
         },
         {
             "name": "Calculator V1",

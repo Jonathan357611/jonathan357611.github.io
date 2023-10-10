@@ -1,0 +1,69 @@
+<p>This is a small gadget which is able to show me a quick overview of my next schoolday with eventual changes in the plan.</p>
+<br>
+<p>Please note that this project is a bit more "private", which means that the Github repo is not <i>yet</i> public, although it exists.
+If you somehow have the desire to know more, you can contact me for example on Discord: "jonathan.f."</p>
+<img src="sideview.jpg" alt="">
+<h2 class="section_title">Overview</h2>
+<p>
+    I am using a normal Raspberry Pi Zero W (The second version should work, although not tested) along a 2.13" red and black epaper display from WaveShare.
+    <br>
+    There is an installer provided, which just requires a fresh install of preferably Raspberry Pi OS Lite (32 Bit) and just requires "git" to be installed.
+    <br><br>
+    The installer will make the program run on boot every 30 minutes.
+    If there is a change detected in the substitution plan, it will be updated.
+    <br><br>
+    Furthermore, the script figures out, which day you probably want to see.
+    If the time is >12:00, it will show the next day. This is because I am in school at this time and it will just have a seamless "transition" between days.
+</p>
+<h2 class="section_title">Configuration</h2>
+<p>
+    In the GitHub repo, there is a file called "data.json". This is the config file.
+    <br>
+    The values "username" and "password" should be pretty obvious, they require the login data for your schools DSBMobile account.
+    <br>
+    The grade field requires you to enter, well, the grade your in. For example "10".
+    The class for me would be "A".
+    <br><br>
+    The "schedule" might be a bit complex and there are probably better ways to do this,
+    anyways.
+    <br>
+    Every day is its own list [], each lesson then gets a dictionary that should look something like this:
+    <img src="lesson_json.png" alt="">
+    You then just repeat this for how many lessons you got each day.
+    <br><br>
+    That would be the entire config and be sufficient to run the program.
+</p>
+<h2 class="section_title">Code</h2>
+<p>
+    <h2>main.py</h2>
+    <p>First, the custom libraries "display_controller" and "get_plan" as well as "time" are imported.</p>
+    <pre><code class="language-python">import display_controller
+import get_plan
+import time</code></pre>
+    <p>It will then start a while True loop and keep track of the execution time to ensure exactly 30 minutes of wait time.</p>
+    <p>It runs</p>
+    <pre><code class="language-python">periods = get_plan.get_periods()</code></pre>
+    <p>and then it runs this code (If periods have changed):</p>
+    <pre><code class="language-python">display_controller.draw_plan(periods, get_plan.get_weekday_name(get_plan.get_display_day()))</code></pre>
+    <p>You can see, that it calls "display_controller.draw_plan()" with the parameters schedule=periods, and day=a string it gets from a function, which represents the weekday.</p>
+    <p>Thats basically all for main.py. The script will now wait half an hour and rerun.</p>
+    <br><br>
+    <h2>get_plan.py</h2>
+    <p>The most important function is basically "get_updated_plans()". This function will fetch the substitution plan using this wonderful wrapper: <a href="https://github.com/nerrixde/DSBApi">DSBApi</a></p>
+    <p>With the data received through DSB, it will iterate every row and column and update the nominal plan saved in "data.json" with updated data. It looks something like this:</p>
+    <pre><code class="language-python">new_plan[day][period]["name"] = column["subject"]</code></pre>
+    <br>
+    <p>The file also has all the functionality to parse the current weekday.</p>
+    <br><br>
+    <h2>display_controller.py</h2>
+    <p>This piece of the code is responsible to draw the parsed data onto the eink. It does this using the SPI connection and a script by WaveShare, which makes the communications a whole lot easier.</p>
+    <p>It basically calculates the dimensions for the weekday-title and then just iterates over the schedule.
+        <br>
+        The function draws a box with the dimensions 103px * 22px for each lesson and puts the data in them in this format:
+        <br>
+        Lesson/Teacher/Room
+        <br>
+        If the "changed" key is set to true, which happens in get_plan.py, the box including the text is changed to red. 
+        This is makes it easy to tell in a quick glance, if there is any change.
+    </p>
+</p>
