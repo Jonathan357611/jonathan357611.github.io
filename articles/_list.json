@@ -18,6 +18,13 @@
                     "link": "https://github.com/Jonathan357611/Calc-V1"
                 }
             ]
+        },
+        {
+            "name": "Binary Clock",
+            "description": "A clock which counts the time in binary using three rows with 6 columns to show a 6 (=64) bit integer for the seconds, minutes and hours.<br><br>It uses a nodemcu esp32 and 18 WS2812b pixels in a 3D printed case and some paper to act as a diffuser.<br><br>This project is still in a \"beta\"!",
+            "image": "binaryclock",
+            "filename": "binary_clock",
+            "links": []
         }
     ]
 }
