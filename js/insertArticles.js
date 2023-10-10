@@ -2,7 +2,7 @@ const projects_container = document.getElementById("_place_articles");
 
 function getArticles() {
     return new Promise((resolve, reject) => {
-        fetch("/articles/_list.json")
+        fetch("articles/list.json")
         .then(response => {
             if (!response.ok) {
                 reject(`Network response was not ok: ${response.status}`);

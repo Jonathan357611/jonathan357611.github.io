@@ -4,7 +4,7 @@ const article_content = document.getElementById("article_content");
 
 function getArticles() {
     return new Promise((resolve, reject) => {
-        fetch("/articles/_list.json")
+        fetch("articles/list.json")
         .then(response => {
             if (!response.ok) {
                 reject(`Network response was not ok: ${response.status}`);
