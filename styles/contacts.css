@@ -52,17 +52,17 @@
 #contact_cards {
     background-color: #fff;
     width: 100%;
-    margin: 20px;
-    padding: 5px;
     display: flexbox;
 }
 .contact {
     color: #000;
-    height: 30%;
+    height: 33vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    border-left: 1em solid black;
+    border-right: 1em solid black;
 }
 .contact:nth-child(odd) {
     background-color: #000;
@@ -70,7 +70,7 @@
 }
 .contact_title {
     width: 50%;
-    font-size: 4vmax;
+    font-size: 4vmin;
     padding-left: 0.5em;
     border-right: 2px solid #fff;
 }
@@ -81,7 +81,7 @@
 .contact_name {
     width: 50%;
     text-align: center;
-    font-size: 150%;
+    font-size: 3vmin;
 }
 .contact_name a {
     color: white;   
@@ -110,7 +110,7 @@
         padding: 1em;
         margin: 0;
         height: auto;
-        font-size: 4.5vmin;
+        font-size: 2.2vmax;
     }
 
     #contact_cards_outer {
@@ -126,13 +126,14 @@
     }
     .contact {
         height: 10vh;
+        border: none;
     }
     .contact_title {
-        font-size: 200%;
+        font-size: 6vmin;
         width: 50vw;
     }
     .contact_name {
-        font-size: 90%;
+        font-size: 3.5vmin;
         width: 50vw;
     }
 }
