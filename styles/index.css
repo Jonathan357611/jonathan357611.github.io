@@ -89,19 +89,32 @@ html, body {
 }
 
 .description_text {
-    font-size: 120%;
+    font-size: 2.5vh;
     font-weight: 100;
 }
 
 .project .button {
-    border-radius: 20px;
+    /*border-radius: 20px;
     position: relative;
     padding: 0.6em;
     min-width: 10%;
     text-align: center;
     background-color: #fff;
     color: #000;
-    text-decoration: none;
+    font-size: 2vh;
+    text-decoration: none;*/
+    position: absolute;
+    width: calc(80% - 2em);
+    margin-left: 10%;
+    height: 10%;
+    background-color: white;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    color: black;
+    bottom: 10%;
 }
 
 .project:nth-child(even) .button {
@@ -136,5 +149,13 @@ html, body {
 
     .project_title {
         font-size: 5vh;
+    }
+
+    .project .button {
+        position: relative;
+        bottom: auto;
+        height: 5vh;
+        margin: 0 auto;
+        border-radius: 0.4em;
     }
 }

@@ -32,7 +32,7 @@
 #intro_text {
     padding: 1em;
     max-width: 70vw;
-    font-size: 120%;
+    font-size: 2.5vh;
 }
 
 #intro_footer {
@@ -40,14 +40,14 @@
     color: #000;
     position: absolute;
     bottom: 0;
-    height: 2em;
     width: 100%;
     text-align: center;
+    font-size: 2vh;
 }
 
 .title_big {
     background-color: #000;
-    font-size: 600%;
+    font-size: 7vh;
     letter-spacing: 5px;
     font-weight: 900;
 }
@@ -69,10 +69,13 @@
     #intro_text {
         padding: 0.5em;
         max-width: 90vw;
-        font-size: calc(45% + 2vw);
+        font-size: 2vh;
+        /*font-size: calc(45% + 2vw);*/
     }
     .title_big {
-        font-size: 3.3em;
+        font-size: 5vh;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
         width: 100%;
         text-align: center;
     }
