@@ -20,6 +20,13 @@
             ]
         },
         {
+            "name": "Blood Sugar Display",
+            "description": "A 11*5 display which shows me my current blood sugar retrieved from my Dexcom G6. It runs WLED and is integrated into my Home Assistant instance to allow for a seamless experience. The data is retrieved and processed by a Python script. It will adapt completely to all the other lights in my room making it very undistracting.",
+            "image": "bloodsugardisplay",
+            "filename": "bloodsugar",
+            "links": []
+        },
+        {
             "name": "Binary Clock",
             "description": "A clock which counts the time in binary using three rows with 6 columns to show a 6 (=64) bit integer for the seconds, minutes and hours.<br><br>It uses a nodemcu esp32 and 18 WS2812b pixels in a 3D printed case and some paper to act as a diffuser.<br><br>This project is still in a \"beta\"!",
             "image": "binaryclock",
